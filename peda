@@ -1,0 +1,48 @@
+Cards have Suit: "Clubs", "Diamonds", "Spades", "Hearts"
+Cards have Face: 2, 3, 4, 5, 6, 7, 8, 9, Jack, Queen, King, Ace
+Player has a Hand of Cards
+Dealer has a Hand of Cards
+The total value of a hand is the sum of the all the cards in the hand
+After player is dealt 2 cards, they have a choice to Hit and Stand
+If the player Hits, a card is dealt from the deck to the player. 
+If the player Stands, the dealer plays
+The dealer will   
+
+
+
+// 1. Create a new deck
+  Deck deck = new Deck();
+2. Ask the deck to shuffle 52 cards
+  deck.Shuffle();
+3. Create a player hand
+  Hand playerHand = new Hand();
+4. create a dealer hand
+  Hand dealerHand = new Hand();
+5. Ask the deck for a card and place it in the player hand (2x)
+  var dealtCard = deck.Deal();
+  playerHand.Accept(dealtCard);
+6. ask the deck for a card and place it in the dealer hand (2x)
+  var dealtCard = deck.Deal();
+  dealerHand.Accept(dealtCard);
+7. Show the player the TotalValue of their Hand
+8. If they have BUSTED, then goto step 15
+11. Ask the player if they want to HIT or STAND
+12. If HIT
+​
+- Ask the deck for a card and place it in the player hand
+- goto step 10
+​
+13. If STAND continue on
+14. Show the dealer's hand TotalValue
+15. If the dealer has busted then goto step 17
+16. If the dealer has less than 17
+    - Ask the deck for a card and place it in the dealer hand
+    - goto step 14
+17. If the player busted show "COMPUTER WINS"
+18. If the dealer busted show "PLAYER WINS"
+19. If the dealer's hand is more than the player's hand then show "DEALER WINS", else show "PLAYER WINS"
+20. -- Hmm, what to do if they are even?
+21. Ask the user if they want to play again.
+- If yes, goto step 1
+22. Show the user "thanks for playing"
+​
